@@ -33,7 +33,7 @@ $$
 
 where $\tau(t)$ is the trend component, $s(t)$ is the seasonality component,
 $h(t)$ is the holiday component, and $v(t)$ is other regressors components. Those
-components are hard-coded as linear in the original formulation of Faacebook Prophet, but in Prophetverse they are versatile and can be defined by the user. __This is the first main difference
+components are hard-coded as linear in the original formulation of Facebook Prophet, but in Prophetverse they are versatile and can be defined by the user. __This is the first main difference
 between Prophet and Prophetverse__. The $f_i$ functions are defined by the [`Effects API`](https://prophetverse.com/effects-api/) 
 , where the user can create their own components and priors, by using the already
 available ones or by creating new [`BaseEffect`](https://prophetverse.com/reference/effects/) subclasses.
