@@ -40,7 +40,7 @@ class PiecewiseLinearTrend(TrendEffectMixin, BaseEffect):
     ----------
     changepoint_interval : int
         The interval between changepoints.
-    changepoint_range : int
+    changepoint_range : float
         The range of the changepoints.
     changepoint_prior_scale : dist.Distribution
         The prior scale for the changepoints.
@@ -64,8 +64,8 @@ class PiecewiseLinearTrend(TrendEffectMixin, BaseEffect):
     def __init__(
         self,
         changepoint_interval: int = 25,
-        changepoint_range: int = 0.8,
-        changepoint_prior_scale: dist.Distribution = 0.001,
+        changepoint_range: float = 0.8,
+        changepoint_prior_scale: Union[float, dist.Distribution] = 0.001,
         offset_prior_scale=0.1,
         squeeze_if_single_series: bool = True,
         remove_seasonality_before_suggesting_initial_vals: bool = True,
